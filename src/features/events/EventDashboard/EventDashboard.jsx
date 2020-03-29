@@ -14,12 +14,12 @@ const eventsFromDashboard = [
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.',
 		city: 'London, UK',
 		venue: "Tower of London, St Katharine's & Wapping, London",
-		hostedBy: 'Bob',
+		hostedBy: 'Dave',
 		hostPhotoURL: 'https://randomuser.me/api/portraits/men/20.jpg',
 		attendees: [
 			{
 				id: 'a',
-				name: 'Bob',
+				name: 'Dave',
 				photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
 			},
 			{
