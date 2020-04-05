@@ -7,7 +7,7 @@ import SignedInMenu from '../Menus/SignedInMenu';
 class NavBar extends Component {
 	state = {
 		authenticated: false
-	}
+	};
 
 	handleSignIn = () => this.setState({ authenticated: true });
 	handleSignOut = () => {
@@ -26,18 +26,20 @@ class NavBar extends Component {
 					</Menu.Item>
 					<Menu.Item as={NavLink} to='/events' name='Events' />
 					<Menu.Item as={NavLink} to='/people' name='People' />
+					<Menu.Item as={NavLink} to='/test' name='Test' />
 					<Menu.Item>
-						<Button 
+						<Button
 							as={Link}
 							to='/createEvent'
 							floated='right'
 							positive
 							inverted
-							content='Create Event' />
+							content='Create Event'
+						/>
 					</Menu.Item>
 					{authenticated ? (
 						<SignedInMenu signOut={this.handleSignOut} />
-						) : (
+					) : (
 						<SignedOutMenu signIn={this.handleSignIn} />
 					)}
 				</Container>
