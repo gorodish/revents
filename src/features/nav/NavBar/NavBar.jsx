@@ -5,9 +5,11 @@ import { NavLink, Link, withRouter } from 'react-router-dom';
 import SignedOutMenu from '../Menus/SignedOutMenu';
 import SignedInMenu from '../Menus/SignedInMenu';
 import { openModal } from '../../modals/modalActions';
+import {logout} from '../../auth/authActions'
 
 const actions = {
 	openModal,
+	logout
 };
 
 const mapState = (state) => ({
@@ -25,13 +27,13 @@ class NavBar extends Component {
 	};
 
 	handleSignOut = () => {
-		this.setState({ authenticated: false });
+		this.props.logout();
 		this.props.history.push('/');
 	};
 
 	render() {
 		const { auth } = this.props;
-		const authenticated = this.auth.authenticated;
+		const authenticated = auth.authenticated;
 
 		return (
 			<Menu inverted fixed='top'>
