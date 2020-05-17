@@ -3,7 +3,7 @@ import { Segment, Button, Grid, Icon } from 'semantic-ui-react';
 import EventDetailedMap from './EventDetailedMap';
 
 const EventDetailedInfo = ({ event }) => {
-	const [isMapOpen, showMapToggle] = useState(false);
+	const [isMapOpen, showMapToggle] = useState(true);
 
 	return (
 		<Segment.Group>
@@ -45,11 +45,11 @@ const EventDetailedInfo = ({ event }) => {
 					</Grid.Column>
 				</Grid>
 			</Segment>
-			{isMapOpen && (
-				<EventDetailedMap
+			{isMapOpen && 
+			<EventDetailedMap
 					lat={event.venueLatLng.lat}
 					lng={event.venueLatLng.lng}></EventDetailedMap>
-			)}
+			}
 		</Segment.Group>
 	);
 };
